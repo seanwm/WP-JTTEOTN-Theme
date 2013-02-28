@@ -134,6 +134,11 @@ p {
 
 a {
 	color:#84FFFB;
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:underline;
 }
 
 #header {
@@ -253,6 +258,15 @@ ul.menu li a{
 	-webkit-font-smoothing: antialiased;
 	font-family:'headline_onehplhs', helvetica, verdana, sans-serif;
 }
-ul.menu li a:hover{
+ul.menu li a:hover, ul.menu li.current-menu-item a{
+	color:#84FFFB;
+}
+div.upcoming h1 a{
+	color:#FFFFFF;
+}
+div.upcoming h1 a:hover{
+
+}
+div.upcoming h1 a:hover{
 	color:#84FFFB;
 }

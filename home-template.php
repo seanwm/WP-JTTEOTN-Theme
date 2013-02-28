@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Snarfer
+Template Name: Home Template
 */
 
 get_header();
@@ -59,7 +59,7 @@ $args = array(
 			<?php foreach($up as $upj ):?>
 				<?php //echo $upj->post_title;
 					$last_date = get_post_meta($upj->ID, 'journey_date', true);
-					$cats = wp_get_object_terms($upj->ID,'journey_city');
+					$cats = wp_get_object_terms($upj->ID,'cities');
 					echo "<a href=\"".get_permalink($upj->ID)."\">". $cats[0]->name."</a>";
 					$j++;
 					if ($j<count($up)) echo " and ";
@@ -68,7 +68,7 @@ $args = array(
 			on <?php 
 			echo date("F jS", strtotime($last_date));
 			$i++;
-			if ($i<count($upcoming_journeys)) echo " and ";
+			if ($i<count($upcoming_journeys)) echo " and in ";
 			?>
 		<?php endforeach;?>
 	<?php endif;?>
