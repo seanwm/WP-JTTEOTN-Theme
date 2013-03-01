@@ -5,12 +5,7 @@
 		<div id="push"></div>
 
 	<div id="footer">
-		<ul>
-			<li><a href="mailto:you@sfzero.org">contact us</a></li>
-			<li><a href="organize">organize</a></li>
-			<li><a href="http://creativecommons.org/licenses/by-nc/3.0/">license</a></li>
-			<li><a href="/press">press photos</a></li>
-		</ul>
+		<?php wp_nav_menu( array( 'container_class' => 'menu-footer', 'theme_location' => 'footer', 'fallback_cb' => '' ) ); ?>
 	</div>
 
 </body>

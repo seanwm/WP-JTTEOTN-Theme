@@ -244,12 +244,13 @@ ul.menu {
 	padding-left:0;
 	padding-top:5px;
 }
-ul.menu li {
+
+div.menu-header ul.menu li {
 	float:left;
 	height:24px;
 	margin-right:40px;
 }
-ul.menu li a{
+div.menu-header ul.menu li a{
 	text-transform:uppercase;
 	text-decoration:none;
 	color:#FFF;
@@ -269,4 +270,19 @@ div.upcoming h1 a:hover{
 }
 div.upcoming h1 a:hover{
 	color:#84FFFB;
+}
+h3.citycrumb, h3.citycrumb a{
+	color:#ccc;
+
+}
+ul.city-list
+{
+	list-style-type:none;
+}
+ul.city-list li
+{
+	
+}
+h1.journey_title.single{
+margin-bottom:0;
 }

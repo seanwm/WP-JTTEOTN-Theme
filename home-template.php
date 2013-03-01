@@ -9,8 +9,6 @@ while ( have_posts() )
 {
 	the_post();
 	$content_str = get_the_content();
-	//$content_str = apply_filters('the_content', $content_str);
-	//$content_str = str_replace(']]>', ']]&gt;', $content_str);
 }
 
 
@@ -26,14 +24,10 @@ $args = array(
 		);
 		$upcoming = new WP_Query( $args );
 		if( $upcoming->have_posts() ) {
-			//echo "Posts!";
-			
 			$ups = $upcoming->get_posts();
 			foreach($ups as $up)
 			{
-				//print_r($up);
 				$start_date = get_post_meta($up->ID, 'journey_date', true);
-				//die("Start date: ".$start_date);
 				if (!isset($upcoming_journeys[$start_date]))
 				{
 					$upcoming_journeys[$start_date] = array();
@@ -102,4 +96,3 @@ echo $content_str;
 
 <?php
 get_footer();
-?>
